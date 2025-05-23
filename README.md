@@ -42,7 +42,7 @@ We trained and evaluated several regression models to predict the `cnt` (total n
 - ✅ Decision Tree Regressor
 - ✅ K-Nearest Neighbors Regressor
 - ✅ Ridge and Lasso Regressors
-- 🚫 Logistic Regression *(Removed due to poor performance)*
+- ✅ Logistic Regression *(poor performance)*
 
 #### 🔎 Evaluation Metrics:
 - **R² Score**
