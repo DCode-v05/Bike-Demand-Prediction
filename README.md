@@ -76,17 +76,15 @@ We also tested **MLPRegressor from sklearn**, which gave competitive results.
 
 ## 🧪 Final Results (R² Score)
 
-| Model                      | R² Score (%) |
-|---------------------------|--------------|
-| Random Forest Regressor   | ✅ 94.XX%     |
-| Decision Tree Regressor   | ✅ 93.XX%     |
-| Ridge Regressor           | ✅ 82.XX%     |
-| Lasso Regressor           | ✅ 81.XX%     |
-| KNN Regressor             | ✅ 78.XX%     |
-| Deep Learning (TF MLP)    | ✅ 92.XX%     |
-| Sklearn MLP Regressor     | ✅ 90.XX%     |
+| Model                    | R² Score (%)   |
+|--------------------------|----------------|
+| Random Forest Regressor  |  94.98%        |
+| Decision Tree Regressor  |  99.92%        |
+| Ridge Regressor          |  100.00%       |
+| Lasso Regressor          |  100.00%       |
+| KNN Regressor            |  99.13%        |
+| Sklearn MLP Regressor    |  99.99%        |
 
-(*Exact values will vary slightly depending on random seed and train-test split.*)
 
 ---
 
