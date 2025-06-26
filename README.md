@@ -1,117 +1,110 @@
-# 🚴‍♂️ Bike Sharing Demand Prediction
+# Bike Demand Prediction Project
 
-This project focuses on predicting bike rental demand using a variety of machine learning and deep learning models. By analyzing hourly and daily data from a bike sharing system, we explore patterns and build models to forecast bike usage, which can be used to optimize operations and resource allocation.
-
----
-
-## 📂 Dataset Description
-
-The dataset used is the [Bike Sharing Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset), which contains information about bike rentals from a US-based city.
-
-### Key Features:
-- `season`, `mnth`, `hr`, `weekday`, `holiday`, `workingday`: Time-based and calendar attributes.
-- `weathersit`, `temp`, `atemp`, `hum`, `windspeed`: Weather conditions.
-- `casual`, `registered`, `cnt`: Count of casual, registered, and total users.
-- `dateday`, `datetime`: Date and time info.
-
-The dataset is split into two CSV files:
-- `day.csv` — Aggregated daily data
-- `hour.csv` — Aggregated hourly data (used for modeling)
+## Project Description
+This project aims to predict bike rental demand using machine learning and deep learning techniques. By analyzing historical data from a bike sharing system, the project builds models to forecast bike usage, helping optimize operations and resource allocation for bike sharing services.
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
+## Project Details
 
-We performed EDA to identify trends and seasonality in the data:
+### Dataset
+The project uses the [Bike Sharing Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset), which contains daily and hourly records of bike rentals in a US city. The dataset includes features such as season, month, hour, weekday, holiday, working day, weather conditions, temperature, humidity, windspeed, and user counts (casual, registered, total).
 
-- **Season vs Count** 📈
-- **Yearly trends**
-- **Hourly demand distribution**
-- **Correlation heatmap** to find important relationships
+- **day.csv**: Aggregated daily data
+- **hour.csv**: Aggregated hourly data (used for modeling)
 
-📌 The demand is highest during business hours and in the summer/fall months.
+### Exploratory Data Analysis (EDA)
+- Analysis of seasonal and hourly trends
+- Yearly demand patterns
+- Correlation analysis to identify key features
+- Visualization of demand distribution
 
----
+### Modeling Approaches
+- **Machine Learning Models:**
+  - Random Forest Regressor
+  - Decision Tree Regressor
+  - K-Nearest Neighbors Regressor
+  - Ridge and Lasso Regressors
+  - Logistic Regression (for comparison)
+- **Deep Learning Model:**
+  - Multi-Layer Perceptron (MLP) using TensorFlow
 
-## 🧠 Machine Learning Models
+### Evaluation Metrics
+- R² Score
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
 
-We trained and evaluated several regression models to predict the `cnt` (total number of rentals):
-
-### Models Used:
-- ✅ Random Forest Regressor
-- ✅ Decision Tree Regressor
-- ✅ K-Nearest Neighbors Regressor
-- ✅ Ridge and Lasso Regressors
-- ✅ Logistic Regression *(poor performance)*
-
-#### 🔎 Evaluation Metrics:
-- **R² Score**
-- **Mean Absolute Error (MAE)**
-- **Mean Squared Error (MSE)**
-
-> ✅ **Random Forest and Decision Tree** performed best in traditional ML models.
-
----
-
-## 🤖 Deep Learning Approach
-
-We also built a **Neural Network (MLP)** using `TensorFlow` with the following architecture:
-
-- Input Layer → Dense(128) → BatchNorm → Dropout
-- Hidden Layer → Dense(64) → BatchNorm → Dropout
-- Output Layer → Dense(1)
-
-**Optimization**: RMSprop  
-**Loss**: Mean Squared Error  
-**Callback**: Early Stopping to avoid overfitting
-
-📊 Evaluation:
-- **R² Score**
-- **MAE**
-- **MSE**
-
-We also tested **MLPRegressor from sklearn**, which gave competitive results.
+### Results
+Random Forest, Decision Tree, and Deep Learning models provided the most accurate predictions, with R² scores above 94%.
 
 ---
 
-## 🧪 Final Results (R² Score)
-
-| Model                    | R² Score (%)   |
-|--------------------------|----------------|
-| Random Forest Regressor  |  94.98%        |
-| Decision Tree Regressor  |  99.92%        |
-| Ridge Regressor          |  100.00%       |
-| Lasso Regressor          |  100.00%       |
-| KNN Regressor            |  99.13%        |
-| Sklearn MLP Regressor    |  99.99%        |
-
+## Tech Stack
+- Python
+- Pandas, NumPy, Seaborn, Matplotlib
+- Scikit-learn
+- TensorFlow / tf.keras
 
 ---
 
-## 🧰 Tech Stack
+## Getting Started
 
-- **Python** 🐍
-- **Pandas, NumPy, Seaborn, Matplotlib** 📊
-- **Scikit-learn** 🧪
-- **TensorFlow / tf.keras** 🧠
-
----
-
-## 📌 Conclusion
-
-This project demonstrates the power of regression models in forecasting real-world demand based on time, season, and weather data. Random Forest and Deep Learning models offer the most accurate predictions.
-
----
-
-## 🚀 How to Run
-
-1. **Clone this repo**:
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Denistanb/Bike-Price-Prediction.git
-   cd Bike-Price-Prediction
-2. **Install dependencies**:
+   git clone https://github.com/TensoRag/Bike-Demand-Prediction.git
+   cd Bike-Demand-Prediction
+   ```
+2. **Install dependencies:**
    ```bash
    pip install pandas numpy matplotlib seaborn scikit-learn tensorflow tensorflow-hub
-3. **Run the Notebook**:
+   ```
+3. **Run the Jupyter Notebook:**
    ```bash
-   jupyter notebook "Bike Price Prediction.ipynb"
+   jupyter notebook "Bike Demand Prediction.ipynb"
+   ```
+
+---
+
+## Usage
+- Open the notebook `Bike Demand Prediction.ipynb` in Jupyter Notebook or JupyterLab.
+- Follow the sections for data exploration, preprocessing, model training, and evaluation.
+- Modify or extend the notebook to experiment with different models or parameters.
+
+---
+
+## Project Structure
+```
+Bike-Demand-Prediction/
+│
+├── Bike Demand Prediction.ipynb   # Main analysis and modeling notebook
+├── Data/
+│   ├── day.csv                   # Daily aggregated data
+│   └── hour.csv                  # Hourly aggregated data
+└── README.md                     # Project documentation
+```
+
+---
+
+## Contributing
+
+Contributions are welcome! To contribute:
+1. Fork the repository
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature/your-feature
+   ```
+5. Open a pull request describing your changes.
+
+---
+
+## Contact
+- **GitHub:** [TensoRag](https://github.com/TensoRag)
+- **Email:** denistanb05@gmail.com
