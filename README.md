@@ -51,7 +51,7 @@ Random Forest, Decision Tree, and Deep Learning models provided the most accurat
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/TensoRag/Bike-Demand-Prediction.git
+   git clone https://github.com/DCode-v05/Bike-Demand-Prediction.git
    cd Bike-Demand-Prediction
    ```
 2. **Install dependencies:**
@@ -106,5 +106,5 @@ Contributions are welcome! To contribute:
 ---
 
 ## Contact
-- **GitHub:** [TensoRag](https://github.com/TensoRag)
+- **GitHub:** [DCode-v05](https://github.com/DCode-v05)
 - **Email:** denistanb05@gmail.com
